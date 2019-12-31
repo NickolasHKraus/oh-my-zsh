@@ -23,10 +23,14 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%}%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
+ZSH_THEME_AWS_PREFIX="["
+ZSH_THEME_AWS_SUFFIX="]"
+
 PROMPT='
 %{$fg_bold[default]%}${PWD/#$HOME/~}%{$reset_color%}\
 $(git_prompt_info)\
 %{$fg[default]%} \
 $(virtualenv_prompt_info)%{$reset_color%} \
+$(aws_prompt_info) \
 %{$fg[red]%}%*%{$reset_color%}
 $ '
